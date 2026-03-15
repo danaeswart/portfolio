@@ -8,10 +8,10 @@
    ---------------------------------------------------------- */
 :root {
   /* ── Brand Palette ── */
-  --blush:           #ed3636;
-  --blush-dark:      #e34242;
-  --blush-light:     rgba(227, 104, 136, 0.10);
-  --blush-mid:       rgba(227, 104, 136, 0.22);
+  --blush:           #ff9966;
+  --blush-dark:      #ff5125;
+  --blush-light:     rgba(167, 19, 59, 0.1);
+  --blush-mid:       rgba(168, 25, 63, 0.22);
 
   --sky:             #2d33df;
   --sky-dark:        #2d33df;
@@ -26,7 +26,7 @@
   --tangerine-light: rgba(240, 140, 33, 0.11);
   --tangerine-mid:   rgba(240, 140, 33, 0.24);
 
-  --sea:             #7da3e0;
+  --sea:             #3524e9;
   --sea-dark:        #2d33df;
   --sea-light:       rgba(102, 152, 204, 0.11);
   --sea-mid:         rgba(102, 152, 204, 0.24);
@@ -42,7 +42,7 @@
   --border:        #EDE8E2;
   --border-warm:   rgba(240, 140, 33, 0.18);
 
-  --text-primary:   #2C2320;   /* warm near-black */
+  --text-primary:   #0e0b0a;   /* warm near-black */
   --text-secondary: #6B5E58;
   --text-muted:     #A89890;
 
@@ -210,6 +210,7 @@ mark.highlight::after {
   background: var(--sea);
   color: #fff;
   box-shadow: 0 4px 18px rgba(102, 152, 204, 0.38);
+ 
 }
 .btn-primary:hover {
   background: var(--sea-dark);
@@ -264,13 +265,10 @@ mark.highlight::after {
 }
 .nav-logo:hover { opacity: 0.7; }
 
-.logo-dot {
-  display: inline-block;
-  width: 8px; height: 8px;
-  background: var(--tangerine);
-  border-radius: 50%;
-  margin-bottom: 2px;
+.logo{
+  width: 8rem; 
 }
+
 .logo-accent { color: var(--tangerine); }
 
 .nav-links {
@@ -454,6 +452,8 @@ mark.highlight::after {
 .hero-cta {
   display: flex; gap: var(--space-sm); flex-wrap: wrap;
   animation: heroSlideIn 1s var(--t-slow) 0.65s both;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .hero-stats {
@@ -1172,6 +1172,10 @@ mark.highlight::after {
   transition: color var(--t-fast);
 }
 .footer-links a:hover { color: white; }
+
+.logofoot{
+  width: 6rem;
+}
 
 /* ----------------------------------------------------------
    13. BACK TO TOP
