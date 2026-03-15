@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Portfolio Viewer - Danae Swart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: var(--font-body);
+        background: var(--bg);
+        color: var(--text-primary);
+        line-height: 1.65;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        position: relative;
+      }
+      
+      /* Floating Aura Background */
+      .aura-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+        animation: fadeIn 2s ease-out;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      .aura {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.12;
+        animation: float 8s ease-in-out infinite;
+        will-change: transform;
+        box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1);
+      }
+      
+      .aura.aura-1 {
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(circle, rgba(125, 163, 224, 0.8) 0%, rgba(125, 163, 224, 0.3) 35%, rgba(125, 163, 224, 0.1) 60%, transparent 85%);
+        top: 10%;
+        left: 15%;
+        animation-delay: 0s;
+        animation-duration: 12s;
+      }
+      
+      .aura.aura-2 {
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(circle, rgba(240, 140, 33, 0.7) 0%, rgba(240, 140, 33, 0.25) 35%, rgba(240, 140, 33, 0.08) 60%, transparent 85%);
+        top: 60%;
+        right: 20%;
+        animation-delay: -3s;
+        animation-duration: 10s;
+      }
+      
+      .aura.aura-3 {
+        width: 280px;
+        height: 280px;
+        background: radial-gradient(circle, rgba(227, 104, 136, 0.6) 0%, rgba(227, 104, 136, 0.2) 35%, rgba(227, 104, 136, 0.05) 60%, transparent 85%);
+        top: 80%;
+        left: 10%;
+        animation-delay: -6s;
+        animation-duration: 14s;
+      }
+      
+      .aura.aura-4 {
+        width: 190px;
+        height: 190px;
+        background: radial-gradient(circle, rgba(180, 181, 52, 0.7) 0%, rgba(180, 181, 52, 0.25) 35%, rgba(180, 181, 52, 0.08) 60%, transparent 85%);
+        top: 30%;
+        right: 10%;
+        animation-delay: -9s;
+        animation-duration: 11s;
+      }
+      
+      .aura.aura-5 {
+        width: 380px;
+        height: 380px;
+        background: radial-gradient(circle, rgba(45, 51, 223, 0.5) 0%, rgba(45, 51, 223, 0.15) 35%, rgba(45, 51, 223, 0.05) 60%, transparent 85%);
+        top: 120%;
+        left: 60%;
+        animation-delay: -12s;
+        animation-duration: 16s;
+      }
+      
+      .aura.aura-6 {
+        width: 170px;
+        height: 170px;
+        background: radial-gradient(circle, rgba(242, 216, 143, 0.8) 0%, rgba(242, 216, 143, 0.3) 35%, rgba(242, 216, 143, 0.1) 60%, transparent 85%);
+        top: 150%;
+        left: 20%;
+        animation-delay: -15s;
+        animation-duration: 9s;
+      }
+      
+      @keyframes float {
+        0%, 100% {
+          transform: translate(0, 0) rotate(0deg) scale(1);
+        }
+        25% {
+          transform: translate(25px, -35px) rotate(60deg) scale(1.08);
+        }
+        50% {
+          transform: translate(-15px, -50px) rotate(120deg) scale(0.92);
+        }
+        75% {
+          transform: translate(-35px, -15px) rotate(180deg) scale(1.04);
+        }
+      }
+      
+      /* Enhanced mobile responsiveness for auras */
+      @media (max-width: 768px) {
+        .aura {
+          filter: blur(40px);
+          opacity: 0.08;
+        }
+        
+        .aura.aura-1, .aura.aura-5 {
+          width: 200px;
+          height: 200px;
+        }
+        
+        .aura.aura-2, .aura.aura-3 {
+          width: 150px;
+          height: 150px;
+        }
+        
+        .aura.aura-4, .aura.aura-6 {
+          width: 120px;
+          height: 120px;
+        }
+      }
+      
+      :root {
+        --bg: #FDFCFA;
+        --surface: #FFFFFF;
+        --border: #EDE8E2;
+        --text-primary: #2C2320;
+        --text-secondary: #6B5E58;
+        --tangerine: #F08C21;
+        --sea-dark: #2d33df;
+        --butter-light: rgba(242, 216, 143, 0.22);
+        --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+        --font-display: 'Space Grotesk', system-ui, sans-serif;
+        --space-lg: 2rem;
+        --r-sm: 0.5rem;
+        --r-full: 9999px;
+        --shadow-sm: 0 1px 4px rgba(108,84,72,0.07);
+        --t-fast: 150ms ease;
+        --t-base: 260ms ease;
+      }
+      
+      .viewer-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(253, 252, 250, 0.93);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: 0 1px 0 var(--border), var(--shadow-sm);
+        padding: 0.6rem 0;
+        transition: background var(--t-base), box-shadow var(--t-base), padding var(--t-base);
+      }
+      
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1160px;
+        margin-inline: auto;
+        padding-inline: var(--space-lg);
+      }
+      
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 0.45rem 0.9rem;
+        border-radius: var(--r-full);
+        font-size: 0.9rem;
+        font-weight: 500;
+        background: var(--butter-light);
+        transition: color var(--t-fast), background var(--t-fast), transform var(--t-fast);
+      }
+      
+      .back-btn:hover {
+        color: var(--text-primary);
+        background: rgba(242, 216, 143, 0.35);
+        transform: translateX(-2px);
+      }
+      
+      .project-title {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+      
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: white;
+        text-decoration: none;
+        padding: 0.45rem 0.9rem;
+        border-radius: var(--r-full);
+        font-size: 0.9rem;
+        background: linear-gradient(135deg, var(--sea-dark), var(--tangerine));
+        transition: transform var(--t-fast), box-shadow var(--t-base);
+        font-weight: 500;
+      }
+      
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 152, 204, 0.3);
+      }
+      
+      .viewer-container {
+        margin-top: 100px;
+        padding: 3rem 6rem 3rem 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: calc(100vh - 100px);
+      }
+      
+      .portfolio-image {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 12px 40px rgba(108,84,72,0.13);
+        transition: transform var(--t-base);
+      }
+/*       
+      .portfolio-image:hover {
+        transform: scale(1.02);
+      } */
+      
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+      }
+      
+      .error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        text-align: center;
+        color: #ed3636;
+      }
+      
+      .error-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1rem;
+        opacity: 0.6;
+      }
+      
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .nav-container {
+          padding-inline: 1rem;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+        
+        .project-title {
+          font-size: 1rem;
+          order: 3;
+          width: 100%;
+          text-align: center;
+          margin-top: 0.5rem;
+        }
+        
+        .viewer-container {
+          padding: 2rem 1rem;
+          margin-top: 120px;
+        }
+        
+        .back-btn,
+        .download-btn {
+          font-size: 0.85rem;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .nav-container {
+          padding-inline: 0.75rem;
+        }
+        
+        .viewer-container {
+          padding: 1rem 0.5rem;
+          margin-top: 130px;
+        }
+        
+        .portfolio-image {
+          border-radius: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Floating Aura Background -->
+    <div class="aura-background" id="auraBackground">
+      <div class="aura aura-1"></div>
+      <div class="aura aura-2"></div>
+      <div class="aura aura-3"></div>
+      <div class="aura aura-4"></div>
+      <div class="aura aura-5"></div>
+      <div class="aura aura-6"></div>
+    </div>
+
+    <header class="viewer-header">
+      <div class="nav-container">
+        <a href="index.html#portfolio" class="back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back to Portfolio
+        </a>
+        
+        <h1 class="project-title" id="projectTitle">Portfolio Viewer</h1>
+        
+        <a href="#" class="download-btn" id="downloadBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+          Download
+        </a>
+      </div>
+    </header>
+
+    <main class="viewer-container" id="viewerContainer">
+      <div class="loading" id="loadingState">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 2a10 10 0 0 1 0 20"/>
+        </svg>
+        <span style="margin-left: 0.5rem;">Loading portfolio...</span>
+      </div>
+    </main>
+
+    <script>
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const imageSrc = urlParams.get('image');
+      const projectTitle = urlParams.get('title') || 'Portfolio Project';
+      
+      const viewerContainer = document.getElementById('viewerContainer');
+      const loadingState = document.getElementById('loadingState');
+      const projectTitleElement = document.getElementById('projectTitle');
+      const downloadBtn = document.getElementById('downloadBtn');
+      
+      // Set project title
+      projectTitleElement.textContent = projectTitle;
+      
+      // Set download button href
+      if (imageSrc) {
+        downloadBtn.href = imageSrc;
+        downloadBtn.download = imageSrc.split('/').pop();
+      }
+      
+      if (imageSrc) {
+        // Create image element
+        const img = document.createElement('img');
+        img.className = 'portfolio-image';
+        img.alt = projectTitle;
+        
+        img.onload = function() {
+          loadingState.style.display = 'none';
+          viewerContainer.appendChild(img);
+        };
+        
+        img.onerror = function() {
+          loadingState.style.display = 'none';
+          viewerContainer.innerHTML = `
+            <div class="error">
+              <svg class="error-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <h2>Unable to load portfolio</h2>
+              <p>The requested portfolio image could not be found.</p>
+              <a href="index.html" style="color: #6698CC; margin-top: 1rem; display: inline-block;">← Return to Portfolio</a>
+            </div>
+          `;
+        };
+        
+        img.src = imageSrc;
+      } else {
+        loadingState.style.display = 'none';
+        viewerContainer.innerHTML = `
+          <div class="error">
+            <svg class="error-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <h2>No portfolio specified</h2>
+            <p>Please select a portfolio project to view.</p>
+            <a href="index.html" style="color: #6698CC; margin-top: 1rem; display: inline-block;">← Return to Portfolio</a>
+          </div>
+        `;
+      }
+      
+      // Parallax scroll effects for auras
+      const auras = document.querySelectorAll('.aura');
+      let ticking = false;
+      let mouseX = 0.5;
+      let mouseY = 0.5;
+      
+      function updateAuras() {
+        const scrollY = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        
+        auras.forEach((aura, index) => {
+          const speed = 0.3 + (index * 0.1); // Different speeds for each aura
+          const yPos = scrollY * speed;
+          const rotation = scrollY * 0.08 * (index + 1);
+          
+          // Add horizontal drift based on scroll
+          const xDrift = Math.sin(scrollY * 0.003 + index) * 40;
+          
+          // Mouse influence
+          const mouseInfluence = (index + 1) * 15;
+          const mouseXOffset = (mouseX - 0.5) * mouseInfluence;
+          const mouseYOffset = (mouseY - 0.5) * mouseInfluence * 0.5;
+          
+          // Scale effect based on scroll position
+          const scale = 1 + Math.sin(scrollY * 0.002 + index) * 0.15;
+          
+          // Combine all transformations
+          const finalX = xDrift + mouseXOffset;
+          const finalY = yPos + mouseYOffset;
+          
+          aura.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${rotation}deg) scale(${scale})`;
+          
+          // Opacity changes based on scroll
+          const baseOpacity = 0.12;
+          const scrollOpacity = Math.sin(scrollY * 0.001 + index) * 0.06;
+          aura.style.opacity = Math.max(0.05, Math.min(0.2, baseOpacity + scrollOpacity));
+        });
+        
+        ticking = false;
+      }
+      
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(updateAuras);
+          ticking = true;
+        }
+      }
+      
+      // Smooth scroll listener
+      window.addEventListener('scroll', requestTick, { passive: true });
+      
+      // Add mouse movement interaction (throttled)
+      let mouseTimeout;
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX / window.innerWidth;
+        mouseY = e.clientY / window.innerHeight;
+        
+        clearTimeout(mouseTimeout);
+        mouseTimeout = setTimeout(() => {
+          requestTick();
+        }, 16); // ~60fps
+      });
+      
+      // Add CSS animation for loading spinner
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>

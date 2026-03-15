@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Danae Swart UX/UI Designer, Developer &amp; Artist</title>
+    <meta name="description" content="3rd Year UX/UI Design Student, Web Developer &amp; Artist. Currently seeking internship opportunities." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-dot"></span>danae<span class="logo-accent">.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+          <a href="#home"      class="nav-link active" data-section="home">Home</a>
+          <a href="#portfolio" class="nav-link"         data-section="portfolio">Portfolio</a>
+          <a href="#about"     class="nav-link"         data-section="about">About</a>
+          <a href="#contact"   class="nav-link"         data-section="contact">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ===== HERO SECTION ===== -->
+      <section class="hero" id="home">
+
+        <!-- Floating background shapes
+        <div class="hero-shapes" aria-hidden="true">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+          <div class="shape shape-5"></div>
+        </div> -->
+
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Looking for Internships 2026         </div>
+
+          <h1 class="hero-headline">
+            <span class="line line-1">Hi, I'm <mark class="highlight">Danae</mark></span>
+            <span class="line line-2">I design <em>experiences,</em></span>
+            <span class="line line-3">build the <em>web</em> &amp;</span>
+            <span class="line line-4">explore  <em>creativity</em> at every step.</span>
+          </h1>
+
+          <p class="hero-sub">
+            3rd Year UX/UI Design Student, Web Developer &amp; Artist.<br />
+            Using creative problem solving to my highest advantage.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary">
+              View My Work
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">12+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Years Studying</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">&infin;</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- UI mockup card + floating chips -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card-mock">
+            <div class="mock-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mock-img"></div>
+            <div class="mock-lines">
+              <div class="mock-line w-80"></div>
+              <div class="mock-line w-60"></div>
+              <div class="mock-line w-40 orange"></div>
+            </div>
+            <div class="mock-tags">
+              <span class="mock-tag">UX/UI</span>
+              <span class="mock-tag orange">Design</span>
+            </div>
+          </div>
+
+          <div class="floating-chip chip-1">
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="5" fill="#6698CC"/></svg>
+            UX/UI Designer
+          </div>
+          <div class="floating-chip chip-2">
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><rect width="10" height="10" rx="2" fill="#F08C21"/></svg>
+            Prototyping
+          </div>
+          <div class="floating-chip chip-3">
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><polygon points="5,0 10,10 0,10" fill="#E36888"/></svg>
+            Frontend Dev
+          </div>
+          <div class="floating-chip chip-4">
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="5" fill="#6698CC"/></svg>
+            Artist
+          </div>
+        </div>
+
+        <a href="#portfolio" class="scroll-down" aria-label="Scroll to next section">
+          <span>Scroll</span>
+          <div class="scroll-icon"><div class="scroll-dot"></div></div>
+        </a>
+      </section>
+
+      <!-- ===== PORTFOLIO SECTION ===== -->
+      <section class="portfolio-section reveal" id="portfolio">
+        <div class="container">
+       
+
+<!-- 
+            <div class="skill-card card-sea reveal-child">
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              </div>
+              <h3>UX/UI Design</h3>
+              <p>Crafting intuitive user experiences through research, wireframing, and hi-fi prototyping. Every pixel has a purpose.</p>
+              <ul class="skill-list">
+                <li>User Research &amp; Testing</li>
+                <li>Wireframing &amp; Prototyping</li>
+                <li>Figma &amp; Design Systems</li>
+              </ul>
+            </div> -->
+
+            <!-- <div class="skill-card card-tangerine featured reveal-child">
+              <div class="featured-badge">Main Focus</div>
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Web Development</h3>
+              <p>Building responsive, accessible, and performant websites. I write clean code that brings my designs to life.</p>
+              <ul class="skill-list">
+                <li>HTML, CSS &amp; JavaScript</li>
+                <li>Responsive Layouts</li>
+                <li>Smooth Animations</li>
+              </ul>
+            </div> -->
+<!-- 
+            <div class="skill-card card-matcha reveal-child">
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <h3>Creative Problem Solving</h3>
+              <p>Thinking beyond the surface to solve real problems. Combining empathy with strategy to deliver results users love.</p>
+              <ul class="skill-list">
+                <li>Design Thinking</li>
+                <li>User-Centered Approach</li>
+                <li>Iterative Refinement</li>
+              </ul>
+            </div>
+ -->
+            <!-- <div class="skill-card card-blush reveal-child">
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+              </div>
+              <h3>Artist</h3>
+              <p>Creating visual art, illustration, and graphic work that blends aesthetics with storytelling. Art informs everything I design.</p>
+              <ul class="skill-list">
+                <li>Illustration &amp; Drawing</li>
+                <li>Graphic &amp; Visual Art</li>
+                <li>Colour &amp; Composition</li>
+              </ul>
+            </div> -->
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PORTFOLIO SECTION ===== -->
+      <section class="portfolio-section reveal" id="portfolio">
+        <div class="container">
+          <div class="section-label">My Work</div>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-sub">A collection of work across design, development, and art</p>
+
+          <!-- Toggle Switch -->
+          <div class="toggle-wrapper" role="tablist" aria-label="Project category filter">
+            <button class="toggle-btn active" data-filter="uxui" role="tab" aria-selected="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              UX/UI
+            </button>
+            <button class="toggle-btn" data-filter="dev" role="tab" aria-selected="false">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Dev
+            </button>
+            <button class="toggle-btn" data-filter="art" role="tab" aria-selected="false">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+              Art
+            </button>
+          </div>
+
+          <!-- Project Grid -->
+          <div class="projects-grid" id="projectsGrid">
+
+            <!-- ============================================
+                 UX/UI PROJECTS
+                 ============================================ -->
+            <article class="project-card" data-category="uxui">
+              <div class="project-image" style="background: linear-gradient(135deg, #6698CC 0%, #B9D0D8 100%);">
+                <div class="project-overlay">
+
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  PROJECT FILE PLUG — HealthTrack         ║
+                       ║  1. Add your file to /images/            ║
+                       ║  2. Update the href on the button below  ║
+                       ║  Accepts: .pdf  or  .png                 ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/Port1.png&title=HealthTrack%20App" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace inner SVG with: <img src="images/healthtrack-cover.png" alt="HealthTrack mockup" /> -->
+                  <img src="images/port1Cover.png" alt="HealthTrack App mockup" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-sea">UX Research</span>
+                  <span class="tag tag-sea">Figma</span>
+                </div>
+                <h3 class="project-title">Pop Shop Digital Design System</h3>
+                <p class="project-desc">
+A vibrant digital design system translating the playful Pop Shop festival brand into a scalable set of UI components, patterns, and visual guidelines designed to create a consistent and energetic user experience.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/Port1.png&title=HealthTrack%20Project" class="project-cta">View Case Study &rarr;</a>
+                  <!-- File plug: update href to your actual file -->
+                  <a href="portfolio-viewer.html?image=images/Port1.png&title=HealthTrack%20Project" class="project-file-btn" title="Open full project PDF/PNG">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="uxui">
+              <div class="project-image" style="background: linear-gradient(135deg, #E36888 0%, #F2D88F 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  PROJECT FILE PLUG — Campus Connect      ║
+                       ║  href="images/campus-connect.pdf"        ║
+                       ║  or  href="images/campus-connect.png"    ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/Port2.png&title=Campus%20Connect" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/campus-cover.png" alt="Campus Connect mockup" /> -->
+                  <img src="images/port2Cover.png" alt="Campus Connect mockup" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-blush">UI Design</span>
+                  <span class="tag tag-blush">Prototyping</span>
+                </div>
+                <h3 class="project-title">Campus Connect</h3>
+                <p class="project-desc">A social platform connecting university students for study groups and events. Designed end-to-end from research to hi-fi prototype.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/Port2.png&title=Campus%20Connect%20Project" class="project-cta">View Case Study &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/Port2.png&title=Campus%20Connect%20Project" class="project-file-btn" title="Open full project PDF/PNG">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- UX/UI CARD 3 -->
+            <article class="project-card" data-category="uxui">
+              <div class="project-image" style="background: linear-gradient(135deg, #B4B534 0%, #B9D0D8 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  PROJECT FILE PLUG — UX/UI Card 3        ║
+                       ║  href="images/uxui-project-3.pdf"        ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/Port3.png&title=UX%2FUI%20Project%203" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/uxui-3-cover.png" alt="UX/UI Project 3 mockup" /> -->
+                  <img src="images/Port4Cover.png" alt="UX/UI Project 3 mockup" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-matcha">Add Tag</span>
+                  <span class="tag tag-matcha">Add Tag</span>
+                </div>
+                <h3 class="project-title">UX/UI Project Title</h3>
+                <p class="project-desc">Add a short description of your UX/UI project here — the brief, your process, and the outcome.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/Port3.png&title=UX%2FUI%20Project%203" class="project-cta">View Case Study &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/Port3.png&title=UX%2FUI%20Project%203" class="project-file-btn" title="Open full project PDF/PNG">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- UX/UI CARD 4 -->
+            <article class="project-card" data-category="uxui">
+              <div class="project-image" style="background: linear-gradient(135deg, #E36888 0%, #6698CC 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  PROJECT FILE PLUG — UX/UI Card 4        ║
+                       ║  href="images/uxui-project-4.pdf"        ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/Port4.png&title=UX%2FUI%20Project%204" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/uxui-4-cover.png" alt="UX/UI Project 4 mockup" /> -->
+                  <img src="images/Port3Cover.png" alt="UX/UI Project 4 mockup" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" />
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-blush">Add Tag</span>
+                  <span class="tag tag-blush">Add Tag</span>
+                </div>
+                <h3 class="project-title">UX/UI Project Title</h3>
+                <p class="project-desc">Add a short description of your UX/UI project here — the brief, your process, and the outcome.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/Port4.png&title=UX%2FUI%20Project%204" class="project-cta">View Case Study &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/Port4.png&title=UX%2FUI%20Project%204" class="project-file-btn" title="Open full project PDF/PNG">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ============================================
+                 DEV PROJECTS
+                 ============================================ -->
+            <!-- DEV CARD 1 -->
+            <article class="project-card" data-category="dev" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #B4B534 0%, #6698CC 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  FILE PLUG — Dev Project 1               ║
+                       ║  href="images/dev-project-1.pdf"         ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/dev-project-1.pdf&title=Dev%20Project%201" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/dev-1-cover.png" alt="Dev Project 1 screenshot" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-sea">Add Tag</span>
+                  <span class="tag tag-sea">Add Tag</span>
+                </div>
+                <h3 class="project-title">Dev Project Title</h3>
+                <p class="project-desc">Add a short description of your development project here — what it does, what you built it with, and what you learned.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/dev-project-1.pdf&title=Dev%20Project%201" class="project-cta">View on GitHub &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/dev-project-1.pdf&title=Dev%20Project%201" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- DEV CARD 2 -->
+            <article class="project-card" data-category="dev" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #F08C21 0%, #F2D88F 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  FILE PLUG — Dev Project 2               ║
+                       ║  href="images/dev-project-2.pdf"         ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/dev-project-2.pdf&title=Dev%20Project%202" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/dev-2-cover.png" alt="Dev Project 2 screenshot" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-tangerine">Add Tag</span>
+                  <span class="tag tag-tangerine">Add Tag</span>
+                </div>
+                <h3 class="project-title">Dev Project Title</h3>
+                <p class="project-desc">Add a short description of your development project here — what it does, what you built it with, and what you learned.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/dev-project-2.pdf&title=Dev%20Project%202" class="project-cta">View on GitHub &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/dev-project-2.pdf&title=Dev%20Project%202" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- DEV CARD 3 -->
+            <article class="project-card" data-category="dev" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #B9D0D8 0%, #B4B534 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  FILE PLUG — Dev Project 3               ║
+                       ║  href="images/dev-project-3.pdf"         ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/dev-project-3.pdf&title=Dev%20Project%203" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/dev-3-cover.png" alt="Dev Project 3 screenshot" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-matcha">Add Tag</span>
+                  <span class="tag tag-matcha">Add Tag</span>
+                </div>
+                <h3 class="project-title">Dev Project Title</h3>
+                <p class="project-desc">Add a short description of your development project here — what it does, what you built it with, and what you learned.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/dev-project-3.pdf&title=Dev%20Project%203" class="project-cta">View on GitHub &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/dev-project-3.pdf&title=Dev%20Project%203" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- DEV CARD 4 -->
+            <article class="project-card" data-category="dev" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #6698CC 0%, #E36888 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  FILE PLUG — Dev Project 4               ║
+                       ║  href="images/dev-project-4.pdf"         ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/dev-project-4.pdf&title=Dev%20Project%204" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Project
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/dev-4-cover.png" alt="Dev Project 4 screenshot" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-sky">Add Tag</span>
+                  <span class="tag tag-sky">Add Tag</span>
+                </div>
+                <h3 class="project-title">Dev Project Title</h3>
+                <p class="project-desc">Add a short description of your development project here — what it does, what you built it with, and what you learned.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/dev-project-4.pdf&title=Dev%20Project%204" class="project-cta">View on GitHub &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/dev-project-4.pdf&title=Dev%20Project%204" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ============================================
+                 ART PROJECTS
+                 ============================================ -->
+            <article class="project-card" data-category="art" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #E36888 0%, #F2D88F 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  FILE PLUG — Art Project 1               ║
+                       ║  href="images/art-project-1.pdf"         ║
+                       ║  or  href="images/art-project-1.png"     ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/art-project-1.png&title=Art%20Project%201" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Artwork
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/art-1-cover.jpg" alt="Illustration project" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-blush">Illustration</span>
+                  <span class="tag tag-blush">Digital Art</span>
+                </div>
+                <h3 class="project-title">Art Project Title</h3>
+                <p class="project-desc">Add a short description of your artwork or illustration series here — what inspired it and what it explores visually.</p>
+                <div class="project-footer">
+                  <a href="portfolio-viewer.html?image=images/art-project-1.png&title=Art%20Project%201" class="project-cta">View Full Series &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/art-project-1.png&title=Art%20Project%201" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="art" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #F08C21 0%, #E36888 100%);">
+                <div class="project-overlay">
+                  <a href="portfolio-viewer.html?image=images/art-project-2.png&title=Art%20Project%202" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Artwork
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/art-2-cover.jpg" alt="Graphic design project" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-tangerine">Graphic Design</span>
+                  <span class="tag tag-tangerine">Branding</span>
+                </div>
+                <h3 class="project-title">Art Project Title</h3>
+                <p class="project-desc">Add a short description of your graphic design or branding project here. What was the brief, what did you create?</p>
+                <div class="project-footer">
+                  <a href="#" class="project-cta">View Full Project &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/art-project-2.png&title=Art%20Project%202" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="art" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #B9D0D8 0%, #E36888 100%);">
+                <div class="project-overlay">
+                  <a href="portfolio-viewer.html?image=images/art-project-3.png&title=Art%20Project%203" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Artwork
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/art-3-cover.jpg" alt="Mixed media project" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-sky">Mixed Media</span>
+                  <span class="tag tag-sky">Visual Art</span>
+                </div>
+                <h3 class="project-title">Art Project Title</h3>
+                <p class="project-desc">Add a short description of your mixed media or visual art project. What materials, themes, or ideas did you work with?</p>
+                <div class="project-footer">
+                  <a href="#" class="project-cta">View Full Project &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/art-project-3.png&title=Art%20Project%203" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ART CARD 4 -->
+            <article class="project-card" data-category="art" hidden>
+              <div class="project-image" style="background: linear-gradient(135deg, #B4B534 0%, #E36888 100%);">
+                <div class="project-overlay">
+                  <!-- ╔══════════════════════════════════════════╗
+                       ║  FILE PLUG — Art Project 4               ║
+                       ║  href="images/art-project-4.png"         ║
+                       ║  or  href="images/art-project-4.pdf"     ║
+                       ╚══════════════════════════════════════════╝ -->
+                  <a href="portfolio-viewer.html?image=images/art-project-4.png&title=Art%20Project%204" class="overlay-open-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Open Artwork
+                  </a>
+                </div>
+                <div class="project-img-content">
+                  <!-- Replace with: <img src="images/art-4-cover.jpg" alt="Art Project 4" /> -->
+                  <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag tag-matcha">Add Tag</span>
+                  <span class="tag tag-matcha">Add Tag</span>
+                </div>
+                <h3 class="project-title">Art Project Title</h3>
+                <p class="project-desc">Add a short description of your artwork here — what inspired it and what it explores visually.</p>
+                <div class="project-footer">
+                  <a href="#" class="project-cta">View Full Project &rarr;</a>
+                  <a href="portfolio-viewer.html?image=images/art-project-4.png&title=Art%20Project%204" class="project-file-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    PDF / PNG
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /projects-grid -->
+
+          <!-- File upload instruction note -->
+          <p class="file-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            To add your project files: place your <code>.pdf</code> or <code>.png</code> files in the <code>/images</code> folder and update the <code>href</code> on each card's PDF/PNG button.
+          </p>
+
+        </div>
+      </section>
+
+      <!-- ===== WHAT I DO SECTION ===== -->
+      <section class="what-i-do reveal" id="what-i-do">
+        <div class="container">
+          <div class="section-label">What I Do</div>
+          <h2 class="section-title">Four ways I<br />show up creatively</h2>
+
+          <div class="skills-grid">
+
+            <div class="skill-card card-sea reveal-child">
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              </div>
+              <h3>UX/UI Design</h3>
+              <p>Crafting intuitive user experiences through research, wireframing, and hi-fi prototyping. Every pixel has a purpose.</p>
+              <ul class="skill-list">
+                <li>User Research &amp; Testing</li>
+                <li>Wireframing &amp; Prototyping</li>
+                <li>Figma &amp; Design Systems</li>
+              </ul>
+            </div>
+
+            <div class="skill-card card-tangerine featured reveal-child">
+              <div class="featured-badge">Main Focus</div>
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Web Development</h3>
+              <p>Building responsive, accessible, and performant websites. I write clean code that brings my designs to life.</p>
+              <ul class="skill-list">
+                <li>HTML, CSS &amp; JavaScript</li>
+                <li>Responsive Layouts</li>
+                <li>Smooth Animations</li>
+              </ul>
+            </div>
+
+            <div class="skill-card card-matcha reveal-child">
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <h3>Creative Problem Solving</h3>
+              <p>Thinking beyond the surface to solve real problems. Combining empathy with strategy to deliver results users love.</p>
+              <ul class="skill-list">
+                <li>Design Thinking</li>
+                <li>User-Centered Approach</li>
+                <li>Iterative Refinement</li>
+              </ul>
+            </div>
+
+            <div class="skill-card card-blush reveal-child">
+              <div class="skill-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+              </div>
+              <h3>Artist</h3>
+              <p>Creating visual art, illustration, and graphic work that blends aesthetics with storytelling. Art informs everything I design.</p>
+              <ul class="skill-list">
+                <li>Illustration &amp; Drawing</li>
+                <li>Graphic &amp; Visual Art</li>
+                <li>Colour &amp; Composition</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section class="about-section reveal" id="about">
+        <div class="container">
+          <div class="about-grid">
+
+            <div class="about-left">
+              <div class="section-label">About Me</div>
+              <h2 class="section-title">Designer who codes.<br />Developer who draws.<br />Always curious.</h2>
+
+              <p class="about-text">
+                Hey! I'm Danae, a 3rd year UX/UI Design student with a serious love for web development and art. I live at the intersection of aesthetics and functionality &mdash; building things that look beautiful <em>and</em> actually work.
+              </p>
+              <p class="about-text">
+                When I'm not pushing pixels in Figma or writing CSS, you'll find me sketching, making art, or vigorously annotating wireframes with sticky notes in every colour of my palette.
+              </p>
+              <p class="about-text">
+                I'm currently seeking a hands-on internship where I can contribute meaningfully, grow fast, and collaborate with a team that cares about craft.
+              </p>
+
+              <div class="about-tools">
+                <span class="tool-tag">Figma</span>
+                <span class="tool-tag">Adobe XD</span>
+                <span class="tool-tag">Illustrator</span>
+                <span class="tool-tag">HTML</span>
+                <span class="tool-tag">CSS</span>
+                <span class="tool-tag">JavaScript</span>
+                <span class="tool-tag">Procreate</span>
+                <span class="tool-tag">Notion</span>
+                <span class="tool-tag">Miro</span>
+                <span class="tool-tag">VS Code</span>
+              </div>
+            </div>
+
+            <div class="about-right">
+              <div class="about-photo">
+                <!-- Replace the placeholder div below with:
+                     <img src="images/profile-photo.jpg" alt="Photo of Danae" />
+                     Recommended: 800x600px  -->
+                <div class="photo-placeholder">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#6698CC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <p>Add your photo here</p>
+                  <small>images/profile-photo.jpg</small>
+                </div>
+              </div>
+
+              <div class="skills-section">
+                <h3 class="skills-heading">Skill Levels</h3>
+                <div class="skill-bars" id="skillBars">
+
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>UX Research</span><span class="skill-pct">85%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-sea" data-width="85"></div></div>
+                  </div>
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>UI Design</span><span class="skill-pct">90%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-sea" data-width="90"></div></div>
+                  </div>
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>Wireframing</span><span class="skill-pct">88%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-sky" data-width="88"></div></div>
+                  </div>
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>Prototyping</span><span class="skill-pct">82%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-sky" data-width="82"></div></div>
+                  </div>
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>HTML &amp; CSS</span><span class="skill-pct">88%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-tangerine" data-width="88"></div></div>
+                  </div>
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>JavaScript</span><span class="skill-pct">72%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-tangerine" data-width="72"></div></div>
+                  </div>
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>Illustration &amp; Art</span><span class="skill-pct">88%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-blush" data-width="88"></div></div>
+                  </div>
+                  <div class="skill-bar-row">
+                    <div class="skill-bar-header"><span>Problem Solving</span><span class="skill-pct">92%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill fill-matcha" data-width="92"></div></div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section class="contact-section reveal" id="contact">
+        <div class="container">
+          <div class="section-label">Let's Talk</div>
+          <h2 class="section-title contact-title">
+            Got an internship<br />opportunity?
+            <span class="highlight">&nbsp;Let's chat.</span>
+          </h2>
+          <p class="section-sub">
+            I'm actively looking for internship roles in UX/UI Design, Front-End Development, or even a creative studio.<br />
+            Let's build something beautiful together.
+          </p>
+
+          <div class="contact-grid">
+
+            <a href="mailto:hello@danae.design" class="contact-card email-card">
+              <div class="contact-icon">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">hello@danae.design</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+
+            <a href="tel:+27000000000" class="contact-card phone-card">
+              <div class="contact-icon">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.38 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.97-1.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+27 000 000 0000</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="contact-card linkedin-card">
+              <div class="contact-icon">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">linkedin.com/in/danae</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">&nearr;</span>
+            </a>
+
+            <a href="images/CV_Placeholder.pdf" download class="contact-card cv-card">
+              <div class="contact-icon">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Resume</span>
+                <span class="contact-value">Download CV</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">&darr;</span>
+            </a>
+
+          </div>
+
+          <div class="contact-note">
+            <div class="status-dot"></div>
+            Open to internship opportunities &mdash; let's connect!
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="#home" class="nav-logo footer-logo">
+          <span class="logo-dot"></span>danae<span class="logo-accent">.</span>
+        </a>
+        <p class="footer-copy">&copy; 2024 Danae. Designed, built &amp; made with love.</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:hello@danae.design">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
