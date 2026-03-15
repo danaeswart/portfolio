@@ -329,16 +329,29 @@ mark.highlight::after {
    7. HERO SECTION
    ---------------------------------------------------------- */
 .hero {
-  min-height: 100dvh;
+  min-height: 120dvh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--space-xl);
-  padding: 8rem var(--space-lg) var(--space-3xl);
+  padding: 3.5rem var(--space-lg) var(--space-3xl);
   max-width: 1160px;
   margin-inline: auto;
   position: relative;
   width: 100%;
+  background-image: url('images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Optional overlay for better text readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: -1;
 }
 /* 
 /* ── Floating background shapes ── */
@@ -503,10 +516,14 @@ mark.highlight::after {
 .mock-bar span:nth-child(3) { background: #28C840; }
 
 .mock-img {
-  height: 140px;
+  height: 200px;
   border-radius: var(--r-md);
-  background: linear-gradient(135deg, var(--sea) 0%, var(--blush) 55%, var(--butter) 100%);
+  /* background-image: url('images/Me.JPEG'); */
+  background-size: cover;
+  background-position: center;
   margin-bottom: 1rem;
+  object-fit: contain;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
